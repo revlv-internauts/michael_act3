@@ -42,13 +42,15 @@ function insert($pdo,$first_name, $last_name, $middle_name, $age, $created_at){
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
        
     $pdo = new PDO("sqlite:students.db");
-    insert($pdo,"axe","hotdog","deym",22, date("Y-m-d"));
+    insert($pdo,"kel e","magolona","duuterte",99, date("Y-m-d"));
 }
-else{
-
+elseif($_SERVER["REQUEST_METHOD"] == "GET"){
 foreach ($row as $r) {
         var_dump($r);
         }
+    }
+    else {
+        echo "Invalid request method.";
     }
 
 
@@ -68,3 +70,6 @@ foreach ($row as $r) {
 // if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // }
+?>
+
+
