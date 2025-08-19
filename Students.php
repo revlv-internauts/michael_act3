@@ -43,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
        
     $pdo = new PDO("sqlite:students.db");
     insert($pdo,"kel e","magolona","duuterte",99, date("Y-m-d"));
+    echo "success!!!";
 }
 elseif($_SERVER["REQUEST_METHOD"] == "GET"){
 foreach ($row as $r) {
